@@ -1,59 +1,210 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+PLEASE BUIL A SAAS with laravel12 and pho 8.2 and bult a wholesale billing vos style prefix based
+INTEGRATING FREESWITCH+CGRATE
+1. Authentication & Multi-Tenant
+Roles
+Super Admin
+Carrier
+Reseller
+Customer
+Finance
+NOC/Support
+Features
+JWT auth
+API tokens
+RBAC permissions
+Multi-company isolation
+2. Customer Management
+Entities
+Customers
+Resellers
+Carriers
+Vendors
+Features
+Credit limits
+Balance tracking
+Rate plans
+SIP credentials
+IP authentication
+Fraud thresholds
+3. SIP Trunk Management
+Inbound/Outbound Trunks
+Features
+SIP registration
+IP auth
+Codec settings
+CPS limits
+Concurrent call limits
+Failover routing
+Priority routing
+4. Routing Engine (Very Important)
+LCR (Least Cost Routing)
+Features
+Prefix matching
+Cost comparison
+Priority routing
+Quality-based routing
+ASR/ACD routing
+Real-time failover
+Route groups
+Tables
+routes
+route_groups
+prefixes
+vendors
+gateways
+Routing Logic
+Match destination prefix
+Find active vendor routes
+Compare:
+buy rate
+quality score
+ASR
+ACD
+Select best route
+Failover if failed
+5. Rate Management
+Features
+Buy rates
+Sell rates
+Rate sheets upload
+Margin rules
+Effective dates
+Peak/offpeak
+Billing increments
+File Uploads
+CSV/XLSX import
+Mass updates
+6. Real-Time Billing
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Use:
 
-## About Laravel
+CGRateS
+Redis cache
+Billing Features
+Per-minute billing
+Per-second billing
+Initial interval
+Increment interval
+Rounding rules
+Live debit
+Prepaid/postpaid
+Balance Types
+Main balance
+Bonus balance
+DID balance
+7. DID Management
+Features
+DID inventory
+DID assignment
+Monthly recurring charges
+DID routing
+SIP forwarding
+Geographic DID support
+DID Types
+Local DID
+Toll-free DID
+Mobile DID
+Tables
+dids
+did_orders
+did_routes
+8. Top-Up / Recharge System
+Features
+Manual recharge
+Voucher recharge
+Online payment gateway
+Auto recharge
+Balance transfer
+Payment Gateways
+Stripe
+bKash
+Nagad
+PayPal
+Ledger
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Double-entry accounting preferred.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9. CDR Processing
+Features
+Real-time CDR ingestion
+CDR rating
+Search/filter/export
+Dispute management
+Data Fields
+CLI
+Destination
+Duration
+Billsec
+Buy cost
+Sell cost
+Profit
+10. Fraud Detection
+Required
+Concurrent call detection
+Geographic anomaly
+Excessive CPS
+Balance drain detection
+Blacklist/whitelist
+Actions
+Block account
+Send Telegram alert
+Email/SMS alerts
+11. Reporting & Analytics
+Dashboards
+Profit
+ASR
+ACD
+Traffic volume
+Carrier quality
+Customer usage
+Export
+CSV
+XLSX
+PDF
+12. Carrier Monitoring
+Features
+SIP OPTIONS ping
+Gateway uptime
+Packet loss
+MOS score
+RTP stats
+Database Design (Important)
+Recommended Tables
+Core
+users
+tenants
+accounts
+balances
+transactions
+Routing
+routes
+route_groups
+gateways
+vendors
+prefixes
+Billing
+ratecards
+rates
+cdrs
+invoices
+DID
+dids
+did_routes
+did_orders
+SIP
+trunks
+registrations
+auth_ips
+APIs
+REST APIs
+Required
+Customer API
+DID API
+Billing API
+Routing API
+CDR API
+Payment API
+Webhooks
+Payment success
+Fraud alert
+Low balance
