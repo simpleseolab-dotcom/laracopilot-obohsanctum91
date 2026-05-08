@@ -1,0 +1,2 @@
+<?php
+// Reseller model

@@ -1,0 +1,2 @@
+<?php
+// Ratecard model
