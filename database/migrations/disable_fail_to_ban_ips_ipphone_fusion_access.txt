@@ -1,0 +1,18 @@
+103.29.181.83
+151.158.48.56
+213.199.37.103
+Dhaka1207
+
+
+
+
+systemctl stop fail2ban
+systemctl disable fail2ban
+
+
+Dhaka12071982
+Auth::attempt([
+    'email' => 'admin@kazitel.local',
+    'password' => 'Admin@1234'
+]);
+
